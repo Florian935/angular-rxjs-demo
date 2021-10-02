@@ -1,7 +1,37 @@
 <h2>fromEvent Operator</h2>
 
-<button id="click-button">Click here</button>
+<div class="event-container">
+    <h3>Click Event:</h3>
 
-<div *ngIf="clientXTracker$ | async as clientXTracker">
-    X position: {{ clientXTracker }}
+    <button id="click-button">Click here</button>
+
+    <div *ngIf="clickClientXTracker$ | async as clickClientXTracker">
+        <ng-container *ngFor="let clientX of clickClientXTrackerArray">
+            X position: {{ clientX }}
+        </ng-container>
+    </div>
+</div>
+
+<div class="event-container">
+    <h3>Wheel Event:</h3>
+
+    <button id="wheel-button">Scroll here</button>
+
+    <div *ngIf="wheelClientXTracker$ | async as wheelClientXTracker">
+        <ng-container *ngFor="let clientX of wheelClientXTrackerArray">
+            X position: {{ clientX }}
+        </ng-container>
+    </div>
+</div>
+
+<div class="event-container">
+    <h3>Mouse enter Event:</h3>
+
+    <button id="mouseenter-button">Scroll here</button>
+
+    <div *ngIf="mouseenterClientXTracker$ | async as mouseenterClientXTracker">
+        <ng-container *ngFor="let clientX of mouseenterClientXTrackerArray">
+            X position: {{ clientX }}
+        </ng-container>
+    </div>
 </div>
