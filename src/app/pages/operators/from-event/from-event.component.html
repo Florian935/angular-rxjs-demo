@@ -27,11 +27,23 @@
 <div class="event-container">
     <h3>Mouse enter Event:</h3>
 
-    <button id="mouseenter-button">Scroll here</button>
+    <button id="mouseenter-button">Enter mouse here</button>
 
     <div *ngIf="mouseenterClientXTracker$ | async as mouseenterClientXTracker">
         <ng-container *ngFor="let clientX of mouseenterClientXTrackerArray">
             X position: {{ clientX }}
+        </ng-container>
+    </div>
+</div>
+
+<div class="event-container">
+    <h3>Keyup Event:</h3>
+
+    <input id="keyup" type="text" placeholder="type some text" />
+
+    <div *ngIf="keyupCodeTracker$ | async as keyupCodeTracker">
+        <ng-container *ngFor="let key of keyupCodeTrackerArray">
+            Key pressed: {{ key }}
         </ng-container>
     </div>
 </div>

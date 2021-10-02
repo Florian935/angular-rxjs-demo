@@ -14,6 +14,8 @@ export class FromEventComponent implements AfterViewInit {
     wheelClientXTrackerArray: Array<number> = [];
     mouseenterClientXTracker$?: Observable<number>;
     mouseenterClientXTrackerArray: Array<number> = [];
+    keyupCodeTracker$?: Observable<string>;
+    keyupCodeTrackerArray: Array<string> = [];
 
     constructor() {}
 
@@ -53,6 +55,19 @@ export class FromEventComponent implements AfterViewInit {
                 this.mouseenterClientXTrackerArray = [
                     ...this.mouseenterClientXTrackerArray,
                     clientX,
+                ];
+            })
+        );
+
+        this.keyupCodeTracker$ = fromEvent(
+            document.getElementById('keyup')!,
+            'keyup'
+        ).pipe(
+            map((event: Event) => (event as KeyboardEvent).key),
+            tap((key: string) => {
+                this.keyupCodeTrackerArray = [
+                    ...this.keyupCodeTrackerArray,
+                    key,
                 ];
             })
         );
