@@ -1,0 +1,23 @@
+<h2>bufferToggle Operator</h2>
+
+<p>
+    Click on "start buffer" button to start the buffering. When click on "stop
+    buffer" button, the buffer is closed and you can see the buffered data.
+</p>
+
+<button #startBuffer>Start buffer</button>
+<button #stopBuffer>Stop buffer</button>
+
+<ng-container *ngIf="intervalData.length">
+    <h3>Interval timer:</h3>
+    <div *ngFor="let data of intervalData">
+        {{ data }}
+    </div>
+</ng-container>
+
+<ng-container *ngIf="interval$ | async as interval">
+    <ng-container *ngIf="intervalData.length">
+        <h3>Buffered data:</h3>
+        <div>[{{ intervalBufferedData }}]</div>
+    </ng-container>
+</ng-container>

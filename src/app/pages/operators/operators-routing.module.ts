@@ -35,6 +35,13 @@ const routes: Routes = [
                         (m) => m.BufferTimeModule
                     ),
             },
+            {
+                path: 'buffer-toggle',
+                loadChildren: () =>
+                    import('./buffer-toggle/buffer-toggle.module').then(
+                        (m) => m.BufferToggleModule
+                    ),
+            },
         ],
     },
 ];
