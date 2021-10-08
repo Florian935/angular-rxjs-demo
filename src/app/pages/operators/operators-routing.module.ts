@@ -21,6 +21,13 @@ const routes: Routes = [
                         (m) => m.BufferModule
                     ),
             },
+            {
+                path: 'buffer-count',
+                loadChildren: () =>
+                    import('./buffer-count/buffer-count.module').then(
+                        (m) => m.BufferCountModule
+                    ),
+            },
         ],
     },
 ];
