@@ -1,0 +1,14 @@
+<h2>bufferTime Operator</h2>
+
+<p>
+    The data arrive every 2 seconds because the bufferTime operator is set to 2
+    seconds.
+</p>
+
+<ng-container *ngIf="interval$ | async as interval">
+    <ng-container *ngIf="intervalData.length">
+        <div *ngFor="let data of intervalData">
+            {{ data }}
+        </div>
+    </ng-container>
+</ng-container>
