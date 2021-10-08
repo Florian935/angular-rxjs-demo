@@ -8,9 +8,11 @@ import { map, tap } from 'rxjs/operators';
     styleUrls: ['./from-event.component.scss'],
 })
 export class FromEventComponent implements AfterViewInit {
-    // It may be a better idea to use static:true if the child does not
-    // depend on any conditions. If the visibility of element changes,
-    // then static:false may give better results.
+    /**
+     * ! It may be a better idea to use static:true if the child does not
+     * ! depend on any conditions. If the visibility of element changes,
+     * ! then static:false may give better results.
+     */
     @ViewChild('clickButton', { static: true }) clickButton!: ElementRef;
     clickClientXTracker$?: Observable<number>;
     clickClientXTrackerArray: Array<number> = [];

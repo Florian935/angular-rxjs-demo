@@ -1,0 +1,13 @@
+<h2>buffer Operator</h2>
+
+<button (click)="startInterval()">Start interval</button>
+
+<button #showData>Show data buffered</button>
+<ng-container *ngIf="intervalData.length">
+    <div *ngFor="let data of intervalData">{{ data }}</div>
+</ng-container>
+
+<h3>Actual buffer:</h3>
+<ng-container *ngIf="actualBufferedData.length">
+    [{{ actualBufferedData }}]
+</ng-container>

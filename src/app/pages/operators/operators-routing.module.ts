@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FromEventComponent } from './from-event/from-event.component';
 import { OperatorsComponent } from './operators.component';
 
 const routes: Routes = [
@@ -10,7 +9,17 @@ const routes: Routes = [
         children: [
             {
                 path: 'from-event',
-                component: FromEventComponent,
+                loadChildren: () =>
+                    import('./from-event/from-event.module').then(
+                        (m) => m.FromEventModule
+                    ),
+            },
+            {
+                path: 'buffer',
+                loadChildren: () =>
+                    import('./buffer/buffer.module').then(
+                        (m) => m.BufferModule
+                    ),
             },
         ],
     },
