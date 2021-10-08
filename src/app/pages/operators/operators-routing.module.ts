@@ -49,6 +49,11 @@ const routes: Routes = [
                         (m) => m.BufferWhenModule
                     ),
             },
+            {
+                path: 'take',
+                loadChildren: () =>
+                    import('./take/take.module').then((m) => m.TakeModule),
+            },
         ],
     },
 ];
