@@ -1,0 +1,17 @@
+<h2>bufferWhen Operator</h2>
+
+<button #showBuffer>Show actual buffer</button>
+
+<ng-container *ngIf="intervalData.length">
+    <h3>Interval timer:</h3>
+    <div *ngFor="let data of intervalData">
+        {{ data }}
+    </div>
+</ng-container>
+
+<ng-container *ngIf="interval$ | async as interval">
+    <ng-container *ngIf="actualBufferedData.length">
+        <h3>Buffered data:</h3>
+        <div>[{{ actualBufferedData }}]</div>
+    </ng-container>
+</ng-container>
