@@ -55,7 +55,7 @@ const routes: Routes = [
                     import('./take/take.module').then((m) => m.TakeModule),
             },
             {
-                path: '',
+                path: 'take-last',
                 loadChildren: () =>
                     import('./take-last/take-last.module').then(
                         (m) => m.TakeLastModule

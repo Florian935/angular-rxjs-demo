@@ -13,6 +13,6 @@ export class TakeLastComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {
-        this.data$ = of(1, 2, 3, 4).pipe(takeLast(2), toArray());
+        this.data$ = of(1, 2, 3, 4).pipe(takeLast(3), toArray());
     }
 }
