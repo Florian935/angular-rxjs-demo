@@ -61,6 +61,13 @@ const routes: Routes = [
                         (m) => m.TakeLastModule
                     ),
             },
+            {
+                path: 'take-until',
+                loadChildren: () =>
+                    import('./take-until/take-until.module').then(
+                        (m) => m.TakeUntilModule
+                    ),
+            },
         ],
     },
 ];

@@ -1,0 +1,15 @@
+<h2>takeUntil Operator</h2>
+
+<button #stopInterval>Click to emit event which stop interval</button>
+
+<ng-container *ngIf="intervalData.length">
+    <h3>Interval timer:</h3>
+    <div *ngFor="let data of intervalData">
+        {{ data }}
+    </div>
+</ng-container>
+
+<ng-container *ngIf="intervalData$ | async as intervalData">
+    <h3>Data taken by takeUntil operator:</h3>
+    <div>[ {{ intervalData }} ]</div>
+</ng-container>
