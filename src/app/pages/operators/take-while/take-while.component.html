@@ -1,0 +1,15 @@
+<h2>takeWhile Operator</h2>
+
+<h3>takeWhile operator take data while data is inferior to 3:</h3>
+
+<ng-container *ngIf="data.length">
+    <h3>Interval timer:</h3>
+    <div *ngFor="let d of data">
+        {{ d }}
+    </div>
+</ng-container>
+
+<ng-container *ngIf="dataTaken$ | async as dataTaken">
+    <h3>Data taken by takeWhile operator:</h3>
+    <div>Data taken: [ {{ dataTaken }} ]</div>
+</ng-container>

@@ -68,6 +68,13 @@ const routes: Routes = [
                         (m) => m.TakeUntilModule
                     ),
             },
+            {
+                path: 'take-while',
+                loadChildren: () =>
+                    import('./take-while/take-while.module').then(
+                        (m) => m.TakeWhileModule
+                    ),
+            },
         ],
     },
 ];
