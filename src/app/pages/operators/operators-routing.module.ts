@@ -75,6 +75,11 @@ const routes: Routes = [
                         (m) => m.TakeWhileModule
                     ),
             },
+            {
+                path: 'skip',
+                loadChildren: () =>
+                    import('./skip/skip.module').then((m) => m.SkipModule),
+            },
         ],
     },
 ];

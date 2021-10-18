@@ -1,0 +1,10 @@
+<h2>skip Operator</h2>
+
+<p>
+    The observable emit 1, 2, 3, 4 and 5 value but with skip operator, we skip
+    the 3 first values:
+</p>
+
+<ng-container *ngIf="data$ | async as data">
+    <div *ngFor="let d of data">{{ d }}</div>
+</ng-container>
