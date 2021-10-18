@@ -80,6 +80,13 @@ const routes: Routes = [
                 loadChildren: () =>
                     import('./skip/skip.module').then((m) => m.SkipModule),
             },
+            {
+                path: 'skip-last',
+                loadChildren: () =>
+                    import('./skip-last/skip-last.module').then(
+                        (m) => m.SkipLastModule
+                    ),
+            },
         ],
     },
 ];
