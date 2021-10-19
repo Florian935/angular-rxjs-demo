@@ -87,6 +87,13 @@ const routes: Routes = [
                         (m) => m.SkipLastModule
                     ),
             },
+            {
+                path: 'skip-until',
+                loadChildren: () =>
+                    import('./skip-until/skip-until.module').then(
+                        (m) => m.SkipUntilModule
+                    ),
+            },
         ],
     },
 ];

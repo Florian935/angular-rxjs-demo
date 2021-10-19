@@ -1,0 +1,15 @@
+<h2>skipUntil Operator</h2>
+
+<button #startEmitButton>Click to start emit</button>
+
+<ng-container *ngIf="intervalData.length">
+    <h3>Interval timer:</h3>
+    <div *ngFor="let data of intervalData">
+        {{ data }}
+    </div>
+</ng-container>
+
+<ng-container *ngIf="interval$ | async as interval">
+    <h3>Data taken by skipUntil operator:</h3>
+    <div>{{ interval }}</div>
+</ng-container>
