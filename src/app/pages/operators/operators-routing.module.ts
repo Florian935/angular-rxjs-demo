@@ -94,6 +94,13 @@ const routes: Routes = [
                         (m) => m.SkipUntilModule
                     ),
             },
+            {
+                path: 'skip-while',
+                loadChildren: () =>
+                    import('./skip-while/skip-while.module').then(
+                        (m) => m.SkipWhileModule
+                    ),
+            },
         ],
     },
 ];

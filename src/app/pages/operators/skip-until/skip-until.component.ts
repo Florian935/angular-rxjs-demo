@@ -13,6 +13,7 @@ export class SkipUntilComponent implements OnInit {
     startEmitButton$?: Observable<Event>;
     interval$?: Observable<number>;
     intervalData: Array<number> = [];
+    intervalDataSinceSkipUntil: Array<number> = [];
 
     constructor() {}
 
@@ -21,11 +22,18 @@ export class SkipUntilComponent implements OnInit {
             this.startEmitButton.nativeElement,
             'click'
         );
+
         this.interval$ = interval(1000).pipe(
             tap((data: number) => {
                 this.intervalData = [...this.intervalData, data];
             }),
-            skipUntil(this.startEmitButton$)
+            skipUntil(this.startEmitButton$),
+            tap((data: number) => {
+                this.intervalDataSinceSkipUntil = [
+                    ...this.intervalDataSinceSkipUntil,
+                    data,
+                ];
+            })
         );
     }
 }

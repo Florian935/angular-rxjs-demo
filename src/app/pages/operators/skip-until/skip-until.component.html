@@ -11,5 +11,5 @@
 
 <ng-container *ngIf="interval$ | async as interval">
     <h3>Data taken by skipUntil operator:</h3>
-    <div>{{ interval }}</div>
+    <div *ngFor="let data of intervalDataSinceSkipUntil">{{ data }}</div>
 </ng-container>
