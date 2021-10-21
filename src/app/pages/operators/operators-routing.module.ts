@@ -101,6 +101,13 @@ const routes: Routes = [
                         (m) => m.SkipWhileModule
                     ),
             },
+            {
+                path: 'distinct',
+                loadChildren: () =>
+                    import('./distinct/distinct.module').then(
+                        (m) => m.DistinctModule
+                    ),
+            },
         ],
     },
 ];

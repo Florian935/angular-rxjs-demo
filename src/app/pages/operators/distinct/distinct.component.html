@@ -1,0 +1,15 @@
+<h2>distinct Operator</h2>
+
+<ng-container *ngIf="persons$ | async as persons">
+    <div>Person with distinct name:</div>
+    <br />
+    <div *ngFor="let person of persons">
+        {{ person | json }}
+    </div>
+</ng-container>
+
+<br /><br />
+
+<ng-container *ngIf="data$ | async as data">
+    <div>Distinct number: [{{ data }}]</div>
+</ng-container>
