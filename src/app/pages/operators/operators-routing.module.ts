@@ -136,6 +136,11 @@ const routes: Routes = [
                         (m) => m.SampleModule
                     ),
             },
+            {
+                path: 'audit',
+                loadChildren: () =>
+                    import('./audit/audit.module').then((m) => m.AuditModule),
+            },
         ],
     },
 ];
