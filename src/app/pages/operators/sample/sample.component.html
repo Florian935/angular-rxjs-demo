@@ -1,0 +1,15 @@
+<h2>sample Operator</h2>
+
+<button #click>Click to display the most recently emitted value</button>
+
+<ng-container *ngIf="intervalData.length">
+    <h3>Interval timer:</h3>
+    <div *ngFor="let data of intervalData">
+        {{ data }}
+    </div>
+</ng-container>
+
+<ng-container *ngIf="interval$ | async as interval">
+    <h3>Most recently emitted value:</h3>
+    <div>{{ interval }}</div>
+</ng-container>

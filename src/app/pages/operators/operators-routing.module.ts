@@ -129,6 +129,13 @@ const routes: Routes = [
                         (m) => m.FilterModule
                     ),
             },
+            {
+                path: 'sample',
+                loadChildren: () =>
+                    import('./sample/sample.module').then(
+                        (m) => m.SampleModule
+                    ),
+            },
         ],
     },
 ];
