@@ -141,6 +141,13 @@ const routes: Routes = [
                 loadChildren: () =>
                     import('./audit/audit.module').then((m) => m.AuditModule),
             },
+            {
+                path: 'audit-time',
+                loadChildren: () =>
+                    import('./audit-time/audit-time.module').then(
+                        (m) => m.AuditTimeModule
+                    ),
+            },
         ],
     },
 ];

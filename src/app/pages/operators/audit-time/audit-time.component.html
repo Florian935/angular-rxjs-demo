@@ -1,0 +1,7 @@
+<h2>auditTime Operator</h2>
+
+<button #button>Click to emit last value after a delay of one second</button>
+
+<ng-container *ngIf="clientXPosition$ | async as clientXPosition">
+    <h3>Most recent clientX position: {{ clientXPosition }}</h3>
+</ng-container>
