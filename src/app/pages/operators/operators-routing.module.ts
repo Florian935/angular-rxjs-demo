@@ -108,6 +108,13 @@ const routes: Routes = [
                         (m) => m.DistinctModule
                     ),
             },
+            {
+                path: 'distinct-until-changed',
+                loadChildren: () =>
+                    import(
+                        './distinct-until-changed/distinct-until-changed.module'
+                    ).then((m) => m.DistinctUntilChangedModule),
+            },
         ],
     },
 ];

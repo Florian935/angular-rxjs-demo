@@ -1,0 +1,13 @@
+<h2>distinctUntilChanged Operator</h2>
+
+<div>
+    Notice that distinctUntilChanged operator only check if previous item is
+    distinct and only the previous, not all the emitted values. (in comparison
+    of distinct operator which check all the emitted value and not only the
+    previous emitted value)
+</div>
+<br />
+
+<ng-container *ngIf="data$ | async as data">
+    <div>Data taken: [{{ data }}]</div>
+</ng-container>
