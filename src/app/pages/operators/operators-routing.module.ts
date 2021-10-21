@@ -115,6 +115,13 @@ const routes: Routes = [
                         './distinct-until-changed/distinct-until-changed.module'
                     ).then((m) => m.DistinctUntilChangedModule),
             },
+            {
+                path: 'distinct-until-key-changed',
+                loadChildren: () =>
+                    import(
+                        './distinct-until-key-changed/distinct-until-key-changed.module'
+                    ).then((m) => m.DistinctUntilKeyChangedModule),
+            },
         ],
     },
 ];

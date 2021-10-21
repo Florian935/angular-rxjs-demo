@@ -1,0 +1,8 @@
+<h2>distinctUntilKeyChanged Operator</h2>
+<br />
+<ng-container *ngIf="data$ | async as data">
+    <div>Data taken:</div>
+    <div *ngFor="let person of data">
+        {{ person | json }}
+    </div>
+</ng-container>
