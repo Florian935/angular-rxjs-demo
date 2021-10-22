@@ -172,6 +172,13 @@ const routes: Routes = [
                 loadChildren: () =>
                     import('./last/last.module').then((m) => m.LastModule),
             },
+            {
+                path: 'debounce',
+                loadChildren: () =>
+                    import('./debounce/debounce.module').then(
+                        (m) => m.DebounceModule
+                    ),
+            },
         ],
     },
 ];

@@ -1,0 +1,13 @@
+<h2>debounce Operator</h2>
+
+<div>
+    Emits a notification from the source Observable only after a particular time
+    span determined by another Observable has passed without another source
+    emission.
+</div>
+
+<button #debounceButton>Click here to emit after debounce time</button>
+
+<ng-container *ngIf="clientXPosition$ | async as clientXPosition">
+    <h3>ClientX position: {{ clientXPosition }}</h3>
+</ng-container>

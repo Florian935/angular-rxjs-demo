@@ -1,5 +1,6 @@
 <nav>
-    <a [routerLink]="['from-event']" routerLinkActive="active"> fromEvent </a>
+    <a [routerLink]="['audit']" routerLinkActive="active"> audit </a>
+    <a [routerLink]="['audit-time']" routerLinkActive="active"> auditTime </a>
     <a [routerLink]="['buffer']" routerLinkActive="active"> buffer </a>
     <a [routerLink]="['buffer-count']" routerLinkActive="active">
         bufferCount
@@ -9,14 +10,7 @@
         bufferToggle
     </a>
     <a [routerLink]="['buffer-when']" routerLinkActive="active"> bufferWhen </a>
-    <a [routerLink]="['take']" routerLinkActive="active"> take </a>
-    <a [routerLink]="['take-last']" routerLinkActive="active"> takeLast </a>
-    <a [routerLink]="['take-until']" routerLinkActive="active"> takeUntil </a>
-    <a [routerLink]="['take-while']" routerLinkActive="active"> takeWhile </a>
-    <a [routerLink]="['skip']" routerLinkActive="active"> skip </a>
-    <a [routerLink]="['skip-last']" routerLinkActive="active"> skipLast </a>
-    <a [routerLink]="['skip-until']" routerLinkActive="active"> skipUntil </a>
-    <a [routerLink]="['skip-while']" routerLinkActive="active"> skipWhile </a>
+    <a [routerLink]="['debounce']" routerLinkActive="active"> debounce </a>
     <a [routerLink]="['distinct']" routerLinkActive="active"> distinct </a>
     <a [routerLink]="['distinct-until-changed']" routerLinkActive="active">
         distinctUntilChanged
@@ -25,14 +19,21 @@
         distinctUntilKeyChanged
     </a>
     <a [routerLink]="['filter']" routerLinkActive="active"> filter </a>
+    <a [routerLink]="['first']" routerLinkActive="active"> first </a>
+    <a [routerLink]="['from-event']" routerLinkActive="active"> fromEvent </a>
+    <a [routerLink]="['last']" routerLinkActive="active"> last </a>
     <a [routerLink]="['sample']" routerLinkActive="active"> sample </a>
-    <a [routerLink]="['audit']" routerLinkActive="active"> audit </a>
-    <a [routerLink]="['audit-time']" routerLinkActive="active"> auditTime </a>
+    <a [routerLink]="['skip']" routerLinkActive="active"> skip </a>
+    <a [routerLink]="['skip-last']" routerLinkActive="active"> skipLast </a>
+    <a [routerLink]="['skip-until']" routerLinkActive="active"> skipUntil </a>
+    <a [routerLink]="['skip-while']" routerLinkActive="active"> skipWhile </a>
+    <a [routerLink]="['take']" routerLinkActive="active"> take </a>
+    <a [routerLink]="['take-last']" routerLinkActive="active"> takeLast </a>
+    <a [routerLink]="['take-until']" routerLinkActive="active"> takeUntil </a>
+    <a [routerLink]="['take-while']" routerLinkActive="active"> takeWhile </a>
     <a [routerLink]="['throttle']" routerLinkActive="active"> throttle </a>
     <a [routerLink]="['throttle-time']" routerLinkActive="active">
         throttleTime
     </a>
-    <a [routerLink]="['first']" routerLinkActive="active"> first </a>
-    <a [routerLink]="['last']" routerLinkActive="active"> last </a>
 </nav>
 <router-outlet></router-outlet>
