@@ -148,6 +148,13 @@ const routes: Routes = [
                         (m) => m.AuditTimeModule
                     ),
             },
+            {
+                path: 'throttle',
+                loadChildren: () =>
+                    import('./throttle/throttle.module').then(
+                        (m) => m.ThrottleModule
+                    ),
+            },
         ],
     },
 ];

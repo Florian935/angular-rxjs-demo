@@ -1,6 +1,11 @@
 <h2>auditTime Operator</h2>
 
-<button #button>Click to emit last value after a delay of one second</button>
+<p>
+    auditTime is similar to throttle operator, but emits the last value from the
+    silenced time window.
+</p>
+<p>Click to emit last value after a delay of one second</p>
+<button #button>Click</button>
 
 <ng-container *ngIf="clientXPosition$ | async as clientXPosition">
     <h3>Most recent clientX position: {{ clientXPosition }}</h3>
