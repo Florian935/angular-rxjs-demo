@@ -207,6 +207,11 @@ const routes: Routes = [
                         (m) => m.SingleModule
                     ),
             },
+            {
+                path: 'map',
+                loadChildren: () =>
+                    import('./map/map.module').then((m) => m.MapModule),
+            },
         ],
     },
 ];

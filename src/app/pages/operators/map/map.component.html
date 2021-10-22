@@ -1,0 +1,6 @@
+<h2>map Operator</h2>
+
+<ng-container *ngIf="data$ | async as data">
+    <h3>Data mapped:</h3>
+    <div *ngFor="let person of data">{{ person | json }}</div>
+</ng-container>
