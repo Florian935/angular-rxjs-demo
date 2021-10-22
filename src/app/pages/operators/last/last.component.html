@@ -1,0 +1,9 @@
+<h2>last Operator</h2>
+
+<ng-container *ngIf="data$ | async as data">
+    <div>Last data emitted: {{ data }}</div>
+</ng-container>
+
+<ng-container *ngIf="dataWithPredicate$ | async as data">
+    <div>Last data emitted which pass the predicate: {{ data }}</div>
+</ng-container>

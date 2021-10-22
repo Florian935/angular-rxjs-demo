@@ -163,9 +163,14 @@ const routes: Routes = [
                     ),
             },
             {
-                path: '',
+                path: 'first',
                 loadChildren: () =>
                     import('./first/first.module').then((m) => m.FirstModule),
+            },
+            {
+                path: 'last',
+                loadChildren: () =>
+                    import('./last/last.module').then((m) => m.LastModule),
             },
         ],
     },
