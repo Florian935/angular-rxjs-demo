@@ -155,6 +155,13 @@ const routes: Routes = [
                         (m) => m.ThrottleModule
                     ),
             },
+            {
+                path: 'throttle-time',
+                loadChildren: () =>
+                    import('./throttle-time/throttle-time.module').then(
+                        (m) => m.ThrottleTimeModule
+                    ),
+            },
         ],
     },
 ];

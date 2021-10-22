@@ -1,13 +1,13 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { fromEvent, interval, Observable } from 'rxjs';
-import { map, tap, throttle } from 'rxjs/operators';
+import { asyncScheduler, fromEvent, interval, Observable } from 'rxjs';
+import { map, tap, throttleTime } from 'rxjs/operators';
 
 @Component({
-    selector: 'app-throttle',
-    templateUrl: './throttle.component.html',
-    styleUrls: ['./throttle.component.scss'],
+    selector: 'app-throttle-time',
+    templateUrl: './throttle-time.component.html',
+    styleUrls: ['./throttle-time.component.scss'],
 })
-export class ThrottleComponent implements OnInit {
+export class ThrottleTimeComponent implements OnInit {
     @ViewChild('button', { static: true }) button!: ElementRef;
     button$?: Observable<Event>;
     clientXPosition$?: Observable<number>;
@@ -19,7 +19,7 @@ export class ThrottleComponent implements OnInit {
     ngOnInit(): void {
         this.button$ = fromEvent(this.button.nativeElement, 'click');
         this.clientXPosition$ = this.button$.pipe(
-            throttle((event: Event) => interval(1000), {
+            throttleTime(1000, asyncScheduler, {
                 leading: true,
                 trailing: false,
             }),

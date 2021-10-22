@@ -1,0 +1,13 @@
+<h2>throttleTime Operator</h2>
+
+<p>
+    throttleTime is similar to audit operator, but also emits the first value
+    from the silenced time window.
+</p>
+<p>Click to emit first value and then last value after a delay of one second</p>
+<button #button>Click</button>
+
+<ng-container *ngIf="clientXPosition$ | async as clientXPosition">
+    <h3 *ngIf="firstValue">First value emitted: {{ firstValue }}</h3>
+    <h3>Most recent clientX position: {{ clientXPosition }}</h3>
+</ng-container>
