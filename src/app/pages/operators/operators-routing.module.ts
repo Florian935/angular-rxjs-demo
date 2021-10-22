@@ -231,6 +231,13 @@ const routes: Routes = [
                         (m) => m.MergeMapToModule
                     ),
             },
+            {
+                path: 'concat-map',
+                loadChildren: () =>
+                    import('./concat-map/concat-map.module').then(
+                        (m) => m.ConcatMapModule
+                    ),
+            },
         ],
     },
 ];

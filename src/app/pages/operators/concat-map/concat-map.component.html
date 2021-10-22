@@ -1,0 +1,8 @@
+<h2>concatMap Operator</h2>
+
+<ng-container *ngIf="letters$ | async as letters"> </ng-container>
+
+<ng-container *ngIf="data.length">
+    <h3>Data emitted:</h3>
+    <div *ngFor="let d of data">{{ d }}</div>
+</ng-container>
