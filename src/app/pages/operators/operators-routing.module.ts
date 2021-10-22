@@ -162,6 +162,11 @@ const routes: Routes = [
                         (m) => m.ThrottleTimeModule
                     ),
             },
+            {
+                path: '',
+                loadChildren: () =>
+                    import('./first/first.module').then((m) => m.FirstModule),
+            },
         ],
     },
 ];
