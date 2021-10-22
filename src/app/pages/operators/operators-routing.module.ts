@@ -224,6 +224,13 @@ const routes: Routes = [
                         (m) => m.MergeMapModule
                     ),
             },
+            {
+                path: 'merge-map-to',
+                loadChildren: () =>
+                    import('./merge-map-to/merge-map-to.module').then(
+                        (m) => m.MergeMapToModule
+                    ),
+            },
         ],
     },
 ];
