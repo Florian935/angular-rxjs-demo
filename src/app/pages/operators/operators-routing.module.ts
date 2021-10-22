@@ -212,6 +212,11 @@ const routes: Routes = [
                 loadChildren: () =>
                     import('./map/map.module').then((m) => m.MapModule),
             },
+            {
+                path: 'map-to',
+                loadChildren: () =>
+                    import('./map-to/map-to.module').then((m) => m.MapToModule),
+            },
         ],
     },
 ];
