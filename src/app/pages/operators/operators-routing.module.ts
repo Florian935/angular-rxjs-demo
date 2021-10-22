@@ -193,6 +193,13 @@ const routes: Routes = [
                         (m) => m.ElementAtModule
                     ),
             },
+            {
+                path: 'ignore-elements',
+                loadChildren: () =>
+                    import('./ignore-elements/ignore-elements.module').then(
+                        (m) => m.IgnoreElementsModule
+                    ),
+            },
         ],
     },
 ];

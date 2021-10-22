@@ -1,0 +1,11 @@
+<h2>ignoreElements Operator</h2>
+
+<p>
+    Ignores all items emitted by the source Observable and only passes calls of
+    complete or error.
+</p>
+
+<div>No data are emitted !</div>
+<ng-container *ngIf="data$ | async as data">
+    <div>{{ data }}</div>
+</ng-container>
