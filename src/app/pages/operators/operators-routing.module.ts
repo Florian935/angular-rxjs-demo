@@ -186,6 +186,13 @@ const routes: Routes = [
                         (m) => m.DebounceTimeModule
                     ),
             },
+            {
+                path: 'element-at',
+                loadChildren: () =>
+                    import('./element-at/element-at.module').then(
+                        (m) => m.ElementAtModule
+                    ),
+            },
         ],
     },
 ];
