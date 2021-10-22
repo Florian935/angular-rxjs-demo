@@ -238,6 +238,13 @@ const routes: Routes = [
                         (m) => m.ConcatMapModule
                     ),
             },
+            {
+                path: 'concat-map-to',
+                loadChildren: () =>
+                    import('./concat-map-to/concat-map-to.module').then(
+                        (m) => m.ConcatMapToModule
+                    ),
+            },
         ],
     },
 ];
