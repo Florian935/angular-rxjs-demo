@@ -200,6 +200,13 @@ const routes: Routes = [
                         (m) => m.IgnoreElementsModule
                     ),
             },
+            {
+                path: 'single',
+                loadChildren: () =>
+                    import('./single/single.module').then(
+                        (m) => m.SingleModule
+                    ),
+            },
         ],
     },
 ];

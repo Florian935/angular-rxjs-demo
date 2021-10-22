@@ -1,0 +1,9 @@
+<h2>single Operator</h2>
+
+<ng-container *ngIf="data$ | async as data">
+    <div>Value emitted: {{ data }}</div>
+</ng-container>
+
+<ng-container *ngIf="dataWithPredicate$ | async as data">
+    <div>Value emitted with predicate: {{ data | json }}</div>
+</ng-container>
