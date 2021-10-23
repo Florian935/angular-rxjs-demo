@@ -1,0 +1,12 @@
+<h2>exhaustMap Operator</h2>
+
+<button #intervalButton>Click to emit interval of 5 values</button>
+
+<ng-container *ngIf="clientXPosition$ | async as clientXPosition">
+    <ng-container *ngIf="data.length">
+        <h3>Value emitted:</h3>
+        <div *ngFor="let da of data">
+            {{ da }}
+        </div>
+    </ng-container>
+</ng-container>

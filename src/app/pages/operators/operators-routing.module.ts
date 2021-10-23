@@ -245,6 +245,13 @@ const routes: Routes = [
                         (m) => m.ConcatMapToModule
                     ),
             },
+            {
+                path: 'exhaust-map',
+                loadChildren: () =>
+                    import('./exhaust-map/exhaust-map.module').then(
+                        (m) => m.ExhaustMapModule
+                    ),
+            },
         ],
     },
 ];
