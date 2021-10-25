@@ -252,6 +252,13 @@ const routes: Routes = [
                         (m) => m.ExhaustMapModule
                     ),
             },
+            {
+                path: 'switch-map',
+                loadChildren: () =>
+                    import('./switch-map/switch-map.module').then(
+                        (m) => m.SwitchMapModule
+                    ),
+            },
         ],
     },
 ];
