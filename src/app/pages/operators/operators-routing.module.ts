@@ -259,6 +259,13 @@ const routes: Routes = [
                         (m) => m.SwitchMapModule
                     ),
             },
+            {
+                path: 'switch-map-to',
+                loadChildren: () =>
+                    import('./switch-map-to/switch-map-to.module').then(
+                        (m) => m.SwitchMapToModule
+                    ),
+            },
         ],
     },
 ];

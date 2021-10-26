@@ -1,0 +1,12 @@
+<h2>switchMapTo Operator</h2>
+
+<button #intervalButton>Click to start a new interval</button>
+
+<ng-container *ngIf="interval$ | async as intervalObservable"> </ng-container>
+
+<h3>Interval value:</h3>
+<ng-container *ngIf="interval.length">
+    <div *ngFor="let value of interval">
+        {{ value }}
+    </div>
+</ng-container>
