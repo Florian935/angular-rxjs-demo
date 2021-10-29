@@ -10,6 +10,13 @@ const routes: Routes = [
             ),
     },
     {
+        path: 'subject',
+        loadChildren: () =>
+            import('./pages/subject/subject.module').then(
+                (m) => m.SubjectModule
+            ),
+    },
+    {
         path: '',
         redirectTo: 'operators',
         pathMatch: 'full',
