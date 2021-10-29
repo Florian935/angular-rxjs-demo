@@ -17,6 +17,13 @@ const routes: Routes = [
             ),
     },
     {
+        path: 'cold-observable',
+        loadChildren: () =>
+            import('./pages/cold-observable/cold-observable.module').then(
+                (m) => m.ColdObservableModule
+            ),
+    },
+    {
         path: '',
         redirectTo: 'operators',
         pathMatch: 'full',
