@@ -24,6 +24,13 @@ const routes: Routes = [
             ),
     },
     {
+        path: 'connectable',
+        loadChildren: () =>
+            import('./pages/connectable/connectable.module').then(
+                (m) => m.ConnectableModule
+            ),
+    },
+    {
         path: '',
         redirectTo: 'operators',
         pathMatch: 'full',
