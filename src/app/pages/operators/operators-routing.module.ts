@@ -253,6 +253,11 @@ const routes: Routes = [
                     ),
             },
             {
+                path: 'share',
+                loadChildren: () =>
+                    import('./share/share.module').then((m) => m.ShareModule),
+            },
+            {
                 path: 'switch-map',
                 loadChildren: () =>
                     import('./switch-map/switch-map.module').then(
