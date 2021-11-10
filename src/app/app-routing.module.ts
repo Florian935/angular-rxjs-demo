@@ -24,6 +24,13 @@ const routes: Routes = [
             ),
     },
     {
+        path: 'behavior-subject',
+        loadChildren: () =>
+            import('./pages/behavior-subject/behavior-subject.module').then(
+                (m) => m.BehaviorSubjectModule
+            ),
+    },
+    {
         path: 'connectable',
         loadChildren: () =>
             import('./pages/connectable/connectable.module').then(
