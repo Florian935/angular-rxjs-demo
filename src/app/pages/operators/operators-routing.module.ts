@@ -283,6 +283,13 @@ const routes: Routes = [
                 loadChildren: () =>
                     import('./retry/retry.module').then((m) => m.RetryModule),
             },
+            {
+                path: 'retry-when',
+                loadChildren: () =>
+                    import('./retry-when/retry-when.module').then(
+                        (m) => m.RetryWhenModule
+                    ),
+            },
         ],
     },
 ];
