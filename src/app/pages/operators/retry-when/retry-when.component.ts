@@ -29,6 +29,10 @@ export class RetryWhenComponent implements OnInit {
             retryWhen((error: Observable<string>) => {
                 return error.pipe(
                     tap((status: string) => {
+                        if (!status.startsWith('5')) {
+                            throw 'error';
+                        }
+
                         console.log('retrying ...');
                     })
                 );
@@ -41,7 +45,11 @@ export class RetryWhenComponent implements OnInit {
         });
 
         setTimeout(() => {
-            usersData.responseStatus = '200';
+            if (Math.random() < 0.5) {
+                usersData.responseStatus = '200';
+            } else {
+                usersData.responseStatus = '400';
+            }
         }, 2000);
     }
 }
