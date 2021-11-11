@@ -31,6 +31,13 @@ const routes: Routes = [
             ),
     },
     {
+        path: 'replay-subject',
+        loadChildren: () =>
+            import('./pages/replay-subject/replay-subject.module').then(
+                (m) => m.ReplaySubjectModule
+            ),
+    },
+    {
         path: 'connectable',
         loadChildren: () =>
             import('./pages/connectable/connectable.module').then(

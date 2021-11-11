@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, interval } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
     selector: 'app-behavior-subject',
