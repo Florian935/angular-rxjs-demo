@@ -271,6 +271,13 @@ const routes: Routes = [
                         (m) => m.SwitchMapToModule
                     ),
             },
+            {
+                path: 'catch-error',
+                loadChildren: () =>
+                    import('./catch-error/catch-error.module').then(
+                        (m) => m.CatchErrorModule
+                    ),
+            },
         ],
     },
 ];

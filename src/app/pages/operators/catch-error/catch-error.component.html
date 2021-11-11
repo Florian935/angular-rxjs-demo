@@ -1,0 +1,8 @@
+<h2>catchError Operator</h2>
+
+<ng-container *ngIf="source$ | async as source">
+    <h3>Emitted value:</h3>
+    <ng-container *ngFor="let value of sourceData">
+        <div>{{ value }}</div>
+    </ng-container>
+</ng-container>
