@@ -38,6 +38,13 @@ const routes: Routes = [
             ),
     },
     {
+        path: 'async-subject',
+        loadChildren: () =>
+            import('./pages/async-subject/async-subject.module').then(
+                (m) => m.AsyncSubjectModule
+            ),
+    },
+    {
         path: 'connectable',
         loadChildren: () =>
             import('./pages/connectable/connectable.module').then(
