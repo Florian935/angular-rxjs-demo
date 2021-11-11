@@ -278,6 +278,11 @@ const routes: Routes = [
                         (m) => m.CatchErrorModule
                     ),
             },
+            {
+                path: 'retry',
+                loadChildren: () =>
+                    import('./retry/retry.module').then((m) => m.RetryModule),
+            },
         ],
     },
 ];
