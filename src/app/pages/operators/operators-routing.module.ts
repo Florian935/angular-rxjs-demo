@@ -290,6 +290,20 @@ const routes: Routes = [
                         (m) => m.RetryWhenModule
                     ),
             },
+            {
+                path: 'zip-with',
+                loadChildren: () =>
+                    import('./zip-with/zip-with.module').then(
+                        (m) => m.ZipWithModule
+                    ),
+            },
+            {
+                path: 'fork-join',
+                loadChildren: () =>
+                    import('./fork-join/fork-join.module').then(
+                        (m) => m.ForkJoinModule
+                    ),
+            },
         ],
     },
 ];
