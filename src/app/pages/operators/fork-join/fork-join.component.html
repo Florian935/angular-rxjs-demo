@@ -5,3 +5,8 @@
     source value with 2 anothers observables source and multiply the source
     value by 2 and 3
 </p>
+<p>
+    forkJoin will <strong>WAIT for all passed observables to emit</strong> and
+    complete and <strong>THEN</strong> it will emit an array or an object
+    <strong>ONLY with last values</strong> from corresponding observables.
+</p>
