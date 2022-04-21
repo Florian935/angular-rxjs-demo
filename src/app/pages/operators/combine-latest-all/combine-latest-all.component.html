@@ -1,0 +1,36 @@
+<h2>combineLatestAll Operator</h2>
+
+<div>
+    combineLatestAll takes an Observable of Observables, and collects all
+    Observables from it. Once the outer Observable completes, it subscribes to
+    all collected Observables and combines their values using the combineLatest
+    strategy, such that:
+    <ul>
+        <li>
+            Every time an inner Observable emits, the output Observable emits
+        </li>
+        <li>
+            When the returned observable emits, it emits all of the latest
+            values by:
+            <ul>
+                <li>
+                    If a <strong>project</strong> function is provided, it is
+                    called with each recent value from each inner Observable in
+                    whatever order they arrived, and the result of the
+                    <strong>project</strong>
+                    function is what is emitted by the output Observable.
+                </li>
+                <li>
+                    If there is no <strong>project</strong> function, an array
+                    of all the most recent values is emitted by the output
+                    Observable.
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<br />
+<ng-container *ngIf="source$ | async">
+    <h3>Data emitted (take only 10 for the demo):</h3>
+    <div *ngFor="let value of data">[ {{ value }} ]</div>
+</ng-container>

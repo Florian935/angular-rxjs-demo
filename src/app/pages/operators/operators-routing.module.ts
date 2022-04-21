@@ -304,6 +304,13 @@ const routes: Routes = [
                         (m) => m.ForkJoinModule
                     ),
             },
+            {
+                path: 'combine-latest-all',
+                loadChildren: () =>
+                    import(
+                        './combine-latest-all/combine-latest-all.module'
+                    ).then((m) => m.CombineLatestAllModule),
+            },
         ],
     },
 ];
