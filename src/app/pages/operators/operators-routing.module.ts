@@ -311,6 +311,13 @@ const routes: Routes = [
                         './combine-latest-all/combine-latest-all.module'
                     ).then((m) => m.CombineLatestAllModule),
             },
+            {
+                path: 'combine-latest-with',
+                loadChildren: () =>
+                    import(
+                        './combine-latest-with/combine-latest-with.module'
+                    ).then((m) => m.CombineLatestWithModule),
+            },
         ],
     },
 ];

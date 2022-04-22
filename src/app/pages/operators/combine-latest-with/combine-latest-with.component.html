@@ -1,0 +1,21 @@
+<h2>combineLatestWith Operator</h2>
+
+<div>
+    Returns an observable, that when subscribed to, will subscribe to the source
+    observable and all sources provided as arguments. Once all sources emit at
+    least one value, all of the latest values will be emitted as an array. After
+    that, every time any source emits a value, all of the latest values will be
+    emitted as an array. This is a useful operator for eagerly calculating
+    values based off of changed inputs.
+</div>
+<br />
+<div>
+    <input #input1 placeholder="type text" />
+    <input #input2 placeholder="type text" />
+</div>
+<br />
+
+<ng-container *ngIf="combinedLatestInputs$ | async">
+    <h3>Both inputs value concatened:</h3>
+    <div *ngFor="let concatenedInputs of data">{{ concatenedInputs }}</div>
+</ng-container>
