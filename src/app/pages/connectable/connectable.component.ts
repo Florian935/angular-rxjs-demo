@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { connectable, interval } from 'rxjs';
-import { ConnectableObservableLike } from 'rxjs/internal/observable/connectable';
+import { connectable, ConnectableObservable, interval, Observable } from 'rxjs';
 
 @Component({
     selector: 'app-connectable',
@@ -11,7 +10,7 @@ export class ConnectableComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {
-        const source$: ConnectableObservableLike<number> = connectable(
+        const source$: ReturnType<typeof connectable> = connectable(
             interval(1000)
         );
 

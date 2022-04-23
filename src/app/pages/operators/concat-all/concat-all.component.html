@@ -1,0 +1,24 @@
+<h2>concatAll Operator</h2>
+
+<p>
+    Joins every Observable emitted by the source (a higher-order Observable), in
+    a serial fashion. It subscribes to each inner Observable only after the
+    previous inner Observable has completed, and merges all of their values into
+    the returned observable.
+</p>
+
+<button #button>Click on me</button>
+<br />
+
+<ng-container *ngIf="concatenedClick$ | async">
+    <h3>Queued clicks:</h3>
+    <div *ngIf="queuedClicks.length; else noDataDisplay">
+        {{ queuedClicks }}
+    </div>
+    <ng-template #noDataDisplay><strong>Queue is empty.</strong></ng-template>
+    <br />
+    <h3>Concatened clicks in order of click (with 1sec delay):</h3>
+    <ng-container *ngIf="data.length">
+        <div *ngFor="let concatenedInputs of data">{{ concatenedInputs }}</div>
+    </ng-container>
+</ng-container>

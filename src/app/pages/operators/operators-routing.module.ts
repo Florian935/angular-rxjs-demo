@@ -318,6 +318,13 @@ const routes: Routes = [
                         './combine-latest-with/combine-latest-with.module'
                     ).then((m) => m.CombineLatestWithModule),
             },
+            {
+                path: 'concat-all',
+                loadChildren: () =>
+                    import('./concat-all/concat-all.module').then(
+                        (m) => m.ConcatAllModule
+                    ),
+            },
         ],
     },
 ];
